@@ -1,0 +1,322 @@
+{
+  "users": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "email",
+      "type": "text",
+      "required": true
+    },
+    {
+      "field": "password_hash",
+      "type": "text",
+      "required": true
+    },
+    {
+      "field": "name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "field": "username",
+      "type": "text",
+      "required": true
+    },
+    {
+      "field": "avatar_url",
+      "type": "image",
+      "required": false
+    },
+    {
+      "field": "bio",
+      "type": "text",
+      "required": false
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ],
+  "posts": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "author_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "text",
+      "type": "text",
+      "required": false
+    },
+    {
+      "field": "image_url",
+      "type": "image",
+      "required": false
+    },
+    {
+      "field": "video_url",
+      "type": "video",
+      "required": false
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ],
+  "comments": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "post_id",
+      "type": "uuid (ref posts.id)",
+      "required": true
+    },
+    {
+      "field": "author_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "text",
+      "type": "text",
+      "required": true
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ],
+  "likes": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "post_id",
+      "type": "uuid (ref posts.id)",
+      "required": true
+    },
+    {
+      "field": "user_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ],
+  "reels": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "author_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "video_url",
+      "type": "video",
+      "required": true
+    },
+    {
+      "field": "thumbnail_url",
+      "type": "image",
+      "required": false
+    },
+    {
+      "field": "title",
+      "type": "text",
+      "required": false
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ],
+  "messages": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "sender_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "receiver_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "text",
+      "type": "text",
+      "required": false
+    },
+    {
+      "field": "image_url",
+      "type": "image",
+      "required": false
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ],
+  "listings": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "seller_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "field": "description",
+      "type": "text",
+      "required": true
+    },
+    {
+      "field": "price",
+      "type": "number",
+      "required": true
+    },
+    {
+      "field": "image_url",
+      "type": "image",
+      "required": false
+    },
+    {
+      "field": "status",
+      "type": "text (active/sold)",
+      "required": true
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ],
+  "ad_campaigns": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "owner_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "placement",
+      "type": "text (feed/reels/stories)",
+      "required": true
+    },
+    {
+      "field": "start_date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "field": "end_date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "field": "budget",
+      "type": "number",
+      "required": true
+    },
+    {
+      "field": "status",
+      "type": "text (draft/running/paused)",
+      "required": true
+    }
+  ],
+  "follows": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "follower_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "following_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ],
+  "reports": [
+    {
+      "field": "id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "reported_type",
+      "type": "text (post/reel/user/listing)",
+      "required": true
+    },
+    {
+      "field": "reported_id",
+      "type": "uuid",
+      "required": true
+    },
+    {
+      "field": "reporter_id",
+      "type": "uuid (ref users.id)",
+      "required": true
+    },
+    {
+      "field": "reason",
+      "type": "text",
+      "required": true
+    },
+    {
+      "field": "created_at",
+      "type": "datetime",
+      "required": true
+    }
+  ]
+}
