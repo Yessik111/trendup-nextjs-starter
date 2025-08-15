@@ -1,14 +1,8 @@
-data/monetizationData";:8
-                  }}>Activar</a>
-                </div>
-              ))}
-            </div>
-          </section>
-        ))}
-
-        <hr style={{margin:"24px 0"}}/>
-        <small style={{color:"#777"}}>© {new Date().getFullYear()} TrendUp</small>
-      </div>
-    </main>
+export default function Home() {
+  return (
+    <div>
+      <h1>Prueba de Variables</h1>
+      <p>Variable: {process.env.NEXT_PUBLIC_CLIENT}</p>
+    </div>
   );
 }
