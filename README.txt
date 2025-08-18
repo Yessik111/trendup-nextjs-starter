@@ -1,24 +1,41 @@
-# TrendUp Starter Kit
+# Yuups ✨
 
-Este kit incluye:
-- Paleta de colores (modo claro y oscuro)
-- Tipografía recomendada
-- Componentes UI básicos (botones, chips, inputs) en PNG
-- Esquema inicial de base de datos (CSV + JSON)
-- Guía rápida para activar modo oscuro en Bubble
+Bienvenida a **Yuups**  
+Esta app es tu espacio para compartir, conectar y disfrutar de contenido único.  
 
-## Cómo usar (Bubble)
-1. Crea una app nueva en Bubble y ve a **Settings > General**.
-2. En **Styles**, crea variables de color usando los valores de `branding/colors.json`.
-3. Sube el logo (SVG/PNG) e importa los componentes desde `ui_components/` como referencias de diseño.
-4. Crea los Data Types usando `database/schema.csv` o copia desde `database/schema.json`.
-5. Para modo oscuro: duplica los estilos y cambia los colores por los de `dark_mode`. Usa un **custom state** `isDark` en la página y cambia estilos con Condicionales (When isDark is true...).
+---
 
-## Estructura UI sugerida
-- Header: logo TrendUp (negro + 'Up' violeta), search, notificaciones.
-- Feed: tarjetas blancas con borde gris #E0E0E0, botones primarios violeta #7D3C98.
-- Reels: visor de video vertical, controles en negro/blanco con acento violeta.
-- Marketplace: grilla de productos con filtros arriba.
-- Perfil: avatar, bio corta, tabs (Posts | Reels | Marketplace).
+## 🎨 Características principales
 
-¡Éxitos con tu lanzamiento!
+- Feed dinámico en modo claro y oscuro (colores: violeta, negro y blanco).  
+- Sistema de publicaciones con fotos, videos y texto.  
+- Interacciones: likes, comentarios y compartidos.  
+- Sección de notificaciones en tiempo real.  
+- Perfiles personalizables con foto, biografía y enlaces.  
+
+---
+
+## 💡 Maneras de monetizar Yuups
+
+1. **Publicidad dentro de la app**  
+   Espacios de anuncios nativos (al estilo Instagram/Facebook).  
+
+2. **Suscripciones premium**  
+   Funciones exclusivas como stickers especiales, insignias o acceso anticipado a novedades.  
+
+3. **Monetización por creadores**  
+   Los usuarios pueden recibir propinas o pagos por contenido exclusivo.  
+
+4. **Tiendas o marketplace interno**  
+   Permitir a los usuarios vender productos o servicios dentro de la app.  
+
+5. **Colaboraciones con marcas**  
+   Integrar campañas publicitarias de empresas interesadas en tu audiencia.  
+
+---
+
+## 📲 Instalación y uso
+
+1. Clona este repositorio:  
+   ```bash
+   git clone https://github.com/usuario/yuups.git
