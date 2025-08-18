@@ -1,0 +1,13 @@
+<img
+  src="/portada_yuups.png"
+  alt="Yuups Logo"
+  style={{ width: "200px", marginBottom: "20px" }}
+/>
+
+<h1 style={{ fontSize: "2.5rem", marginBottom: "10px" }}>
+  ✨ Bienvenida a Yuups
+</h1>
+
+<p style={{ fontSize: "1.2rem", maxWidth: "600px" }}>
+  Esta es tu nueva app social 🚀 donde podrás compartir y conectar.
+</p>
